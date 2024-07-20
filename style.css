@@ -1,0 +1,127 @@
+body {
+    background: url(bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Glassmorphism card effect */
+.card {
+    backdrop-filter: blur(25px) saturate(200%);
+    -webkit-backdrop-filter: blur(25px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.46);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    padding: 10px;
+    margin: 5px;
+    width: 110px;
+    text-align: center;
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.card:hover {
+    transform: scale(1.1); /* Scale up the card on hover */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    gap: 5px;
+}
+
+.element-symbol {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.element-number {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.element-name {
+    font-size: 1em;
+}
+
+.searchBox {
+    display: flex;
+    max-width: 250px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background-color: rgba(255, 255, 255, 0.46);
+    backdrop-filter: blur(25px) saturate(200%);
+    -webkit-backdrop-filter: blur(25px) saturate(200%);
+    border-radius: 50px;
+    position: relative;
+    padding: 8px 12px;
+    margin-top: 20px; /* Add some top margin */
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.searchButton {
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+    border: 0;
+    display: inline-block;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the icon inside the button */
+}
+
+/*hover effect*/
+.searchButton:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+}
+
+/*button pressing effect*/
+.searchButton:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    padding: 10px 0; /* Reduce padding */
+    width: 100%; /* Ensure the input takes the remaining space */
+}
+.searchInput::placeholder {
+    color: white;
+    opacity: 1; /* Ensure the placeholder text is fully opaque */
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+/* Remove the blue outline on links and form elements */
+a, button, input, textarea {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important; /* For mobile browsers */
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;    /* For WebKit-based browsers */
+    outline: none !important;                                        /* General outline removal */
+}
+
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: none !important; /* Ensures outline is removed on focus */
+}
